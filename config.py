@@ -6,8 +6,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 # Enable debug mode.
 DEBUG = True
 
-# Connect to the database
+# To supress this warning  
+# FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead 
+SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-
-# TODO IMPLEMENT DATABASE URL
-SQLALCHEMY_DATABASE_URI = '<Put your local database url>'
+# The database uri is of type '<service>://<user>:<password>@<host:port>/<dbname>'
+SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@localhost:5432/fyuurdb'
